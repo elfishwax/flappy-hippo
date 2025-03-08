@@ -6,7 +6,7 @@ let ground1, ground2;
 let score = 0;
 let gameOver = false;
 let groundHeight = 50;
-let scrollSpeed = 2;
+let scrollSpeed = 203;
 let gameStarted = false;
 let scale = 1;
 let audioInitialized = false;
@@ -20,6 +20,7 @@ function preload() {
   pipeBottomImg = loadImage('pipe_bottom.png'); // Bottom pipe image
   groundImg = loadImage('ground.png');     // Ground image (tileable horizontally)
   backgroundMusic = loadSound('mario-fart.mp3');
+
 }
 
 // Initialize the game
@@ -207,7 +208,7 @@ class Bird {
     this.height = 34 * scale;  // Height of the bird image
     this.velocity = 0;         // Vertical velocity
     this.gravity = 0.4 * (scale / 3);        // Gravity pulling the bird down
-    this.jumpStrength = -6 * (scale / 2);    // Velocity boost when flapping
+    this.jumpStrength = -1 * (scale / 2);    // Velocity boost when flapping
   }
 
   update() {
